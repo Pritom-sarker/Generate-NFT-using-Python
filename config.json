@@ -1,0 +1,211 @@
+{
+    "Backgrounds": [
+        {
+            "name": [
+                "fav-1.png",
+                "fav-2.png",
+                "fav-3.png",
+                "fav-4.png",
+                "fav-5.png",
+                "flower-1.png",
+                "flower-2.png",
+                "flower-3.png",
+                "flower-4.png",
+                "flower-5.png",
+                "flower-6.png",
+                "gradient-1.png",
+                "gradient-2.png",
+                "gradient-3.png",
+                "lovesign.png",
+                "mainstar.png",
+                "multi-1.png",
+                "multi-2.png",
+                "multi-3.png",
+                "multi-4.png",
+                "multi-5.png",
+                "simple-1.png",
+                "simple-2.png",
+                "simple-3.png",
+                "simple-4.png",
+                "simple-5.png",
+                "star-1.png",
+                "star-2.png",
+                "star-3.png",
+                "star-4.png",
+                "star-5.png",
+                "xmas.png"
+            ],
+            "weight": [
+                3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125,
+                3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125,
+                3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125, 3.125,
+                3.125, 3.125, 3.125, 3.125, 3.125
+            ]
+        }
+    ],
+    "Clothings": [
+        {
+            "name": [
+                "biker-1.png",
+                "biker-2.png",
+                "biker-3.png",
+                "biker-4.png",
+                "biker-5.png",
+                "coat-1.png",
+                "coat-2.png",
+                "coat-3.png",
+                "coat-4.png",
+                "coat-5.png",
+                "fire-1.png",
+                "fire-2.png",
+                "fire-3.png",
+                "fire-4.png",
+                "fire-5.png",
+                "fire-6.png",
+                "hoodie-1.png",
+                "hoodie-2.png",
+                "hoodie-3.png",
+                "hoodie-4.png",
+                "hoodie-5.png",
+                "hoodie-6.png",
+                "lady-1.png",
+                "lady-2.png",
+                "lady-3.png",
+                "lady-4.png",
+                "lady-5.png",
+                "lady-6.png",
+                "ladycoat-1.png",
+                "ladycoat-2.png",
+                "ladycoat-3.png",
+                "ladycoat-4.png",
+                "ladycoat-5.png",
+                "poncho-1.png",
+                "poncho-2.png",
+                "poncho-3.png",
+                "poncho-4.png",
+                "poncho-5.png",
+                "poncho-6.png",
+                "puff-1.png",
+                "puff-10.png",
+                "puff-2.png",
+                "puff-3.png",
+                "puff-4.png",
+                "puff-5.png",
+                "puff-6.png",
+                "puff-7.png",
+                "puff-8.png",
+                "puff-9.png",
+                "santa.png",
+                "snow-1.png",
+                "snow-2.png",
+                "snow-3.png",
+                "snow-4.png",
+                "snow-5.png",
+                "snow-6.png",
+                "tux-1.png",
+                "tux-2.png",
+                "tux-3.png",
+                "tux-4.png",
+                "tux-5.png",
+                "tux-6.png"
+            ],
+            "weight": [
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065, 1.6129032258065,
+                1.6129032258065, 1.6129032258065
+            ]
+        }
+    ],
+    "Faces": [
+        {
+            "name": [
+                "dark.png",
+                "gradient.png",
+                "green.png",
+                "main.png",
+                "pink.png",
+                "skin.png",
+                "sky.png",
+                "violet.png"
+            ],
+            "weight": [12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5, 12.5]
+        }
+    ],
+    "Nose": [
+        {
+            "name": ["love.png", "ring.png", "sad.png", "smile.png"],
+            "weight": [25, 25, 25, 25]
+        }
+    ],
+    "Eyes": [
+        {
+            "name": [
+                "angry.png",
+                "exited.png",
+                "love.png",
+                "sad.png",
+                "surprise.png"
+            ],
+            "weight": [20, 20, 20, 20, 20]
+        }
+    ],
+    "Wing": [
+        {
+            "name": ["blank.png", "wing.png"],
+            "weight": [98, 2]
+        }
+    ],
+    "Objects": [
+        {
+            "name": [
+                "binni-pink.png",
+                "binni-violet.png",
+                "binni-yellow.png",
+                "binni.png",
+                "bo-black.png",
+                "bo-red.png",
+                "bo-tie-pink.png",
+                "bo-tie-red.png",
+                "bubble.png",
+                "charlie.png",
+                "cigi.png",
+                "cigi2.png",
+                "helmet.png",
+                "love-glass.png",
+                "love-light.png",
+                "love-red.png",
+                "mask.png",
+                "mouth.png",
+                "mustach.png",
+                "oldschool.png",
+                "pipe.png",
+                "pipe2.png",
+                "spec.png",
+                "thug.png",
+                "tie.png"
+            ],
+            "weight": [
+                4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+                4, 4, 4, 4
+            ]
+        }
+    ]
+}
