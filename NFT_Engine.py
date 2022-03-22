@@ -15,7 +15,10 @@ def createImage(pathArray,fileName):
     rgb_im = com.convert('RGB')
     rgb_im.save("./img/{}.png".format(fileName))
 
-
+def writeMetaData(jsn,name):
+    f = open('./metadata/{}.json'.format(name),'w')
+    f.write(json.dumps((jsn), indent = 4))
+    f.close()
 
 if __name__ == '__main__':
 
@@ -29,6 +32,16 @@ if __name__ == '__main__':
     except:
         pass
 
+    try:
+        os.rmdir('metadata')
+    except:
+        pass
+
+    try:
+        os.mkdir('metadata')
+    except:
+        pass
+
     f = open('config.json')
     layers = json.load(f)
     f.close()
@@ -36,16 +49,22 @@ if __name__ == '__main__':
     allUniqueHash = []
     baseAddress = './First-Draft/{}/{}'
     numOfImage = 20
-
+    imgCount=1
     for img in range(0,numOfImage):
         print('Number Of Image: ',img)
         imgPathArray = []
         stringOfImgPath = ''
+        attr=[]
         for layer in layers:
 
             imgFileName = random.choices(layers[layer][0]['name'], layers[layer][0]['weight'])[0]
             imgPathArray.append(baseAddress.format(layer,imgFileName))
             stringOfImgPath+=layer+imgFileName
+            if '-' in imgFileName:
+                attr.append({"trait_type":layer,"value": str(imgFileName).split('-')[0]})
+            else:
+                attr.append({"trait_type":layer,"value": str(imgFileName).split('.')[0]})
+                
 
         if hash(stringOfImgPath) in allUniqueHash:
             print('Same! Img')
@@ -53,7 +72,13 @@ if __name__ == '__main__':
         else:
             allUniqueHash.append(hash(stringOfImgPath))
 
-        createImage(imgPathArray,img)
-
+        createImage(imgPathArray,imgCount)
+        metaData = {}
+        metaData["Name"] = "ShibaPassive #{}".format(img)
+        metaData["Description"] = "Hello world!!"
+        metaData["image"] = "{}.png".format(imgCount)
+        metaData["attributes"] = attr
+        writeMetaData(metaData,imgCount)
+        imgCount+=1
 
 
