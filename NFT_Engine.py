@@ -1,31 +1,8 @@
-import os
-import glob
-import shutil
+import json
 import random
 from PIL import Image
+import os
 
-def createLayerConfig(folder_name):
-    files = glob.glob('./{}/*/*.png'.format(folder_name))
-    layer_data = []
-    layers = []
-    for file in files:
-        temp = file.split('/')
-        if temp[2] not in layers:
-            layers.append(temp[2])
-        layer_data.append([temp[2], file, (str(temp[-1]).split('#')[-1][:-4])])
-
-    final_file = {}
-    for layer in layers:
-        files = []
-        weight = []
-        for data in layer_data:
-            if layer in data:
-                files.append(data[1])
-                weight.append(int(data[2]))
-
-        final_file[layer] = [files, weight]
-
-    return final_file
 
 def createImage(pathArray,fileName):
     im1 = Image.open(pathArray[0]).convert('RGBA')
@@ -39,12 +16,11 @@ def createImage(pathArray,fileName):
     rgb_im.save("./img/{}.png".format(fileName))
 
 
+
 if __name__ == '__main__':
 
-    # Put Layer names in sequence
-    layers = ['Base','Belly','Color','Pattern',"Ring"]
     try:
-        shutil.rmtree('img')
+        os.rmdir('img')
     except:
         pass
 
@@ -53,36 +29,31 @@ if __name__ == '__main__':
     except:
         pass
 
+    f = open('config.json')
+    layers = json.load(f)
+    f.close()
 
-
-
-    layers_data = createLayerConfig('First-Draft')
     allUniqueHash = []
-    numOfImage = 5000
-    img = 0
-    layers = ['Base','Belly','Color','Pattern',"Ring"]
-    for num in range(0,numOfImage):
-        for key, value in layers_data.items():
-            # try:
-                img+=1
-                print('Number Of Image: ', img)
-                imgPathArray = []
-                stringOfImgPath = ''
-                for layer in layers:
-                    weight = list(layers_data[layer][1])
-                    files = list(layers_data[layer][0])
-                    imgFileName = random.choices(files, weight,k=len(weight))[0]
-                    imgPathArray.append(imgFileName)
-                    stringOfImgPath +=  imgFileName
-                    print(imgFileName)
+    baseAddress = './First-Draft/{}/{}'
+    numOfImage = 20
 
-                if hash(stringOfImgPath) in allUniqueHash:
-                    print('Same! Img')
-                    continue
-                else:
-                    allUniqueHash.append(hash(stringOfImgPath))
-                #createImage(imgPathArray, img)
-            # except:
-            #     print("error!!")
+    for img in range(0,numOfImage):
+        print('Number Of Image: ',img)
+        imgPathArray = []
+        stringOfImgPath = ''
+        for layer in layers:
+
+            imgFileName = random.choices(layers[layer][0]['name'], layers[layer][0]['weight'])[0]
+            imgPathArray.append(baseAddress.format(layer,imgFileName))
+            stringOfImgPath+=layer+imgFileName
+
+        if hash(stringOfImgPath) in allUniqueHash:
+            print('Same! Img')
+            continue
+        else:
+            allUniqueHash.append(hash(stringOfImgPath))
+
+        createImage(imgPathArray,img)
+
 
 
